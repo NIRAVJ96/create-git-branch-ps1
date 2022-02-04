@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nirav Project</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .input > input {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="input">
+      <input class="input_btn" name="team" type="radio" value="RAJ" /> Team 1
+      <input class="input_btn" name="team" type="radio" value="team2" /> Team 2
+      <input class="input_btn" name="team" type="radio" value="team3" /> Team 3
+      <input class="input_btn" name="team" type="radio" value="team4" /> Team 4
+
+      <input class="input_btn" name="team" type="radio" value="team5" /> Team 5
+    </div>
+
+    <div class="checbox_container">
+      <input
+        class="input_btn"
+        name="check"
+        type="checkbox"
+        value="team1"
+        checked
+      />
+      nirav
+      <input class="input_btn" name="check" type="radio" value="team2" /> Team 2
+      <input type="radio" name="reason" value="" />Other
+      <input type="text" name="other_reason" />
+    </div>
+
+    <select name="hall" id="hall" value="3">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    
+    <!-- <button onclick="check()">Submit</button> -->
+  </body>
+</html>
+<script>
+  let arr = [];
+  function check() {
+    let input = document.getElementsByClassName("input_btn");
+    // console.log('input:', input[1].checked)
+    for (let i = 0; i < input.length; i++) {
+      if (input[i].checked) {
+        arr.push(input[i].value);
+        console.log(input[i].value);
+      }
+    }
+    console.log(arr.join("/"));
+  }
+</script>
